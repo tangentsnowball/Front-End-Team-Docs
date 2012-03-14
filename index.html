@@ -1,1 +1,308 @@
-My GitHub Page
+<!DOCTYPE HTML>
+<html lang="en-gb"> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Tangent Snowball front-end styleguide: HTML tag testbed</title>
+		<link rel="stylesheet" href="screen.css" media="screen"/>   
+		<link rel="stylesheet" href="print.css" media="print" /> 
+		
+		<!--Demo-specific calls-->
+		<link rel="stylesheet" href="demo.css" media="screen" />
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	</head>
+	<body id="p-demo">
+		<nav role="navigation"> 
+			<ol>
+				<li><a href="#sec-headings" title="Skip to">Headings</a></li>
+				<li><a href="#sec-images" title="Skip to">Images</a></li>
+				<li><a href="#sec-lists" title="Skip to">Lists</a></li>
+				<li><a href="#sec-blockquotes" title="Skip to">Blockquotes</a></li>
+				<li><a href="#sec-hrtag" title="Skip to">The hr tag</a></li>
+				<li><a href="#sec-subsup" title="Skip to">Supscript / superscript</a></li>
+				<li><a href="#sec-markingup" title="Skip to">Marking up content</a></li>
+				<li><a href="#sec-inlinequote" title="Skip to">An inline quote</a></li>
+				<li><a href="#sec-smallprint" title="Skip to">Smallprint</a></li>
+				<li><a href="#sec-strongem" title="Skip to">Strong and em</a></li>
+				<li><a href="#sec-defabr" title="Skip to">Definition and abbreviation</a></li>
+				<li><a href="#sec-code" title="Skip to">Working with code</a></li>
+				<li><a href="#sec-vars" title="Skip to">Variables</a></li>
+				<li><a href="#sec-inlinelinks" title="Skip to">Inline links</a></li>
+				<li><a href="#sec-forms" title="Skip to">Forms</a></li>
+				<li><a href="#sec-tables" title="Skip to">Tables</a></li> 
+			</ol>
+			<a href="#p-demo" title="Skip to" class="cpt-top_link">&uarr; Back to top</a>
+		</nav>	
+	   	<section role="main"> 
+			<header role="banner">   
+				<hgroup>
+					<h1>Tangent Snowball</h1>
+					<h2>Front&ndash;End style guide</h2>
+				</hgroup>
+				<div id="intro">
+					<p>This repo is a basic set of  HTML5 tags and CSS styles (mainly structure) for the Tangent Snowball team to use for new projects.</p>
+					<p>It is not intended as a framework, but as a way to ensure we all work in loosely the same way.</p>   
+				</div>
+			</header>
+			<article id="sec-headings">
+				<h1>Headings</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo est, faucibus quis viverra a, consequat nec eros. Nunc quis placerat nisi. Morbi in justo magna, sit amet placerat neque. Nunc ultrices, leo in porttitor tincidunt, mauris sapien condimentum dui, nec tincidunt leo ante sed arcu. Vivamus ac mauris sapien, quis aliquam justo. Vestibulum aliquet faucibus dignissim. Maecenas imperdiet felis tellus. Pellentesque ac viverra arcu. Morbi iaculis blandit adipiscing.</p>  
+			    <h2>Heading 2</h2>
+				<p>Donec nec metus vitae orci condimentum molestie ac ut libero. Fusce ut arcu a massa luctus mollis sit amet vitae quam. Vestibulum vehicula, diam suscipit scelerisque auctor, arcu orci fringilla sem, et gravida quam leo vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet elementum leo a suscipit.</p> 
+				<h3>Heading 3</h3>
+				<p>Donec nec metus vitae orci condimentum molestie ac ut libero. Fusce ut arcu a massa luctus mollis sit amet vitae quam. Vestibulum vehicula, diam suscipit scelerisque auctor, arcu orci fringilla sem, et gravida quam leo vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet elementum leo a suscipit.</p>
+			    <h4>Heading 4</h4>
+				<p>Donec nec metus vitae orci condimentum molestie ac ut libero. Fusce ut arcu a massa luctus mollis sit amet vitae quam. Vestibulum vehicula, diam suscipit scelerisque auctor, arcu orci fringilla sem, et gravida quam leo vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet elementum leo a suscipit.</p>
+			    <h5>Heading 5</h5>
+				<p>Donec nec metus vitae orci condimentum molestie ac ut libero. Fusce ut arcu a massa luctus mollis sit amet vitae quam. Vestibulum vehicula, diam suscipit scelerisque auctor, arcu orci fringilla sem, et gravida quam leo vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet elementum leo a suscipit.</p>
+			    <h6>Heading 6</h6>
+				<p>Donec nec metus vitae orci condimentum molestie ac ut libero. Fusce ut arcu a massa luctus mollis sit amet vitae quam. Vestibulum vehicula, diam suscipit scelerisque auctor, arcu orci fringilla sem, et gravida quam leo vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet elementum leo a suscipit.</p>    
+			</article>
+			<article id="sec-images">
+				<h1>Images</h1>
+				<figure>
+					<img src="http://placekitten.com/570/300" alt="Large Image"/>
+					<figcaption>A basic image</figcaption>
+				</figure>
+				<figure> 
+					<a href="http://placekitten.com/" title="Visit Placekitten">
+						<img src="http://placekitten.com/570/300" alt="Large Image"/>
+					</a>
+					<figcaption>An image which is linked</figcaption>
+				</figure>
+			</article>
+			<article id="sec-lists">
+				<h1>Lists</h1>	
+				<h2>An ordered list</h2>
+				<ol>
+					<li>Bend over, with your rear facing towards the source of the information</li>
+					<li>Place a hand on each cheek</li>
+					<li>Use both hands to manipulate cheeks whilst talking; this will give the impression that you're talking out of your rear</li>
+				</ol>
+				<h2>An unordered list</h2>
+				<ul>
+					<li>Pyjama top</li>
+					<li>Black boots, unlaced</li>
+					<li>Hair gel</li>
+					<li>Ballerina&ndash;style tutu skirt</li>
+					<li>Basic knowledge of American&ndash;style football cadance</li>
+				</ul>
+				<h2>A definition list</h2>
+				<dl>
+					<dt>Palm leaf</dt>
+					<dd>When set in front of one's face, it is useful to avoid a pet&ndash;hating landlord</dd>
+					<dt>Hand fan</dt>
+					<dd>Although ineffective at personal cooling, it provides short&ndash;range propulsion for an inflatable dinghy</dd>
+					<dt>Bird&ndash;seed</dt>
+					<dd>A tasty snack (to be nibbled and spat out, not eaten), and a great substitute for smoking</dd>
+					<dt>Thrash&ndash;metal club</dt>
+					<dd>A great place to meet long&ndash;haired folk</dd>
+					<dd>Somewhere to meet a local, technically&ndash;adept environmentally aware contact</dd>
+				</dl>
+			</article>
+			<article id="sec-blockquotes">
+				<h1>Blockquotes</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo est, faucibus quis viverra a, consequat nec eros. Nunc quis placerat nisi. Morbi in justo magna, sit amet placerat neque. Nunc ultrices, leo in porttitor tincidunt, mauris sapien condimentum dui, nec tincidunt leo ante sed arcu. Vivamus ac mauris sapien, quis aliquam justo. Vestibulum aliquet faucibus dignissim. Maecenas imperdiet felis tellus. Pellentesque ac viverra arcu. Morbi iaculis blandit adipiscing.</p>   
+				<blockquote>
+					<p>&quot;If I'd been drinking out of the toilet, I might have been killed&quot;</p>
+					<footer>
+						Ace Ventura, from <cite>Ace Ventura &ndash; Pet Detective</cite>
+					</footer>	
+				</blockquote>	
+				<p>Donec nec metus vitae orci condimentum molestie ac ut libero. Fusce ut arcu a massa luctus mollis sit amet vitae quam. Vestibulum vehicula, diam suscipit scelerisque auctor, arcu orci fringilla sem, et gravida quam leo vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet elementum leo a suscipit.</p>
+				<p>Ut vel mi quam. Quisque vel mauris leo, vel placerat dui. Suspendisse non est vel lorem commodo consectetur sit amet sed magna. Aenean fermentum, libero in facilisis sagittis, neque nunc posuere mi, et elementum est neque id dolor.</p>	
+			</article>
+			<article id="sec-hrtag">
+				<h1>Paragraphs with thematic breaks<br />(the repurposed hr tag)</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo est, faucibus quis viverra a, consequat nec eros. Nunc quis placerat nisi. Morbi in justo magna, sit amet placerat neque. Nunc ultrices, leo in porttitor tincidunt, mauris sapien condimentum dui, nec tincidunt leo ante sed arcu. Vivamus ac mauris sapien, quis aliquam justo. Vestibulum aliquet faucibus dignissim. Maecenas imperdiet felis tellus. Pellentesque ac viverra arcu. Morbi iaculis blandit adipiscing.</p>      
+				<hr />
+				<p>Donec nec metus vitae orci condimentum molestie ac ut libero. Fusce ut arcu a massa luctus mollis sit amet vitae quam. Vestibulum vehicula, diam suscipit scelerisque auctor, arcu orci fringilla sem, et gravida quam leo vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet elementum leo a suscipit.</p>
+				<p>Ut vel mi quam. Quisque vel mauris leo, vel placerat dui. Suspendisse non est vel lorem commodo consectetur sit amet sed magna. Aenean fermentum, libero in facilisis sagittis, neque nunc posuere mi, et elementum est neque id dolor.</p> 
+			</article>
+			<article id="sec-subsup"> 	
+				<h1>Supscript / superscript</h1>
+				<p>On the 1<sup>st</sup> day of the month, the N<sub>o</sub> of leaves increase.</p>
+			</article> 
+			<article id="sec-markingup">	
+				<h1>Marking up content relevency/edits and highlighting content</h1>
+				<p>Oh my, <ins>this is an insersion</ins>, this information has <del>been deleted.</del> Here is content that is <s>no longer accurate / relevent.</s> <mark>mark</mark> is a run of text marked or highlighted because of its relevance in another context.</p>  
+			</article>
+			<article id="sec-inlinequote">  
+				<h1>An inline quote</h1>
+				<p>What was that you said <q>&quot;there is a line in the sand man, and across that line you do not&hellip;?&quot;</q></p>
+			</article>
+			<article id="sec-smallprint">
+				<h1>Smallprint</h1>
+				<p><small><em>Small</em> represents side comments such as small print. It is not intended to be presentational. The small element should not be used for extended spans of text such as multiple paragraphs, lists, or sections of text. It is only intended for short runs of text.</small></p>
+			</article> 
+			<article id="sec-strongem">   
+				<h1>Strong and em</h1>
+				<p><strong>Holy</strong> testicle tuesday! Could this <em>be</em> any easier?</p>   
+			</article>     
+			<article id="sec-defabr">
+				<h1>Definition and abbreviation</h1>
+				<p>While they're essential reading material for our job, the <dfn><abbr title="World Wide Web Consortium">W3C</abbr></dfn> specifications are not exactly George R. R. Martin-level reading material.</p>
+				<p>So, the next time I mention the <abbr title="World Wide Web Consortium">W3C</abbr> I can just use an abbreviation tag.</p>
+			</article>	 
+			<article id="sec-code">
+				<h1>Working with code</h1>
+				<p>The <code>code element</code> represents a fragment of computer code. This could be an XML element name, a filename, a computer program, or any other string that a computer would recognize. Eg:</p>
+				<p>
+					<code>
+						/*--[=6a:Mobile]--*/
+						  @media only screen and (min-width:300px) and (max-width:767px) {
+						  }
+						/*--[=6b:768px screen / iPad portrait]--*/
+						  @media only screen and (min-width:768px) and (max-width:991px){
+						  }
+						/*--[=6c:1024px screen]--*/
+						  @media only screen and (min-width:992px) and (max-width:1279px){
+						    }
+						/*--[=6d:Large screen]--*/
+						  @media only screen and (min-width:1280px) and (max-width:1999px){
+						   }
+
+						/*--[=6d:Super large screen]--*/
+						  @media only screen and (min-width:2000px) {
+						   } 
+					</code>
+				</p> 
+				<p>The <kbd>kbd element</kbd> represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands). Eg:</p>
+				<p><kbd>Ctrl+Alt+Delete</kbd></p>
+				<p>The <samp>samp element</samp> represents (sample) output from a program or computing system. Eg:</p>
+				<p>
+					<samp>
+					   	Counting objects: 17, done.
+						Delta compression using up to 4 threads.
+						Compressing objects: 100% (9/9), done.
+						Writing objects: 100% (9/9), 917 bytes, done.
+						Total 9 (delta 8), reused 0 (delta 0)
+						To https://github.com/project.git
+						   697ba8a..3f68971  develop -> develop
+						tj-laptop:www jarmley$ 
+					</samp>
+				</p>
+			</article>
+			<article id="sec-vars">
+				<h1>Variables</h1>
+				<p>The <var>var element</var> represents a variable. This could be an actual variable in a mathematical expression or programming context, or it could just be a term used as a placeholder in prose.</p> 
+			</article>
+			<article id="sec-inlinelinks">
+				<h1>Inline links</h1>
+				<p>A link can be inline, like to <a href="http://www.google.com" title="Visit Google">Google.</a> Also, it can be applied to a heading:</p>
+				<h2><a href="http://www.google.com" title="Visit Google">A heading with a link</a></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo est, faucibus quis viverra a, consequat nec eros. Nunc quis placerat nisi. Morbi in justo magna, sit amet placerat neque. Nunc ultrices, leo in porttitor tincidunt, mauris sapien condimentum dui, nec tincidunt leo ante sed arcu. Vivamus ac mauris sapien, quis aliquam justo. Vestibulum aliquet faucibus dignissim. Maecenas imperdiet felis tellus. Pellentesque ac viverra arcu. Morbi iaculis blandit adipiscing.</p>
+			</article>		
+			<article id="sec-forms">
+				<h1>Forms</h1>
+				<form action="." method="get" class="clearfix">
+					<fieldset>
+						<legend class="inv">Sample form</legend>
+						<div>
+							<label for="text_sample">Text sample</label>
+							<input type="text" name="text_sample" value="" id="text_sample" placeholder="Enter some sample text"/>
+						</div>
+						<div>
+							<label for="email_sample">Email sample</label>
+							<input type="email" name="email_sample" value="" id="email_sample" placeholder="Enter a valid email address"/>
+						</div>
+						<div>
+							<label for="password_sample">Password sample</label>
+							<input type="password" name="password_sample" value="" id="password_sample" placeholder="Enter a password"/>
+						</div> 
+						<div>
+							<label for="search_sample">Search sample</label>
+							<input type="search" name="search_sample" value="" id="search_sample" placeholder="Search the site"/>
+						</div>
+						<div>
+							<label for="tel_sample">Telephone sample</label>
+							<input type="tel" name="tel_sample" value="" id="tel_sample" placeholder="Enter a telephone number"/>
+						</div>
+						<div>
+							<label for="url_sample">URL sample</label>
+							<input type="url" name="url_sample" value="" id="url_sample" placeholder="Enter a URL"/>
+						</div>
+						<div>
+							<label for="type-datetime">Date and Time (datetime)</label>
+							<input type="datetime" name="type-datetime" id="type-datetime" placeholder="Add a date/time">
+						</div>
+						<div>
+							<label for="type-date">Date (date)</label>
+							<input type="date" name="type-date" id="type-date" placeholder="Add a date">
+						</div>
+						<div>
+							<label for="type-month">Month (month)</label>
+							<input type="month" name="type-month" id="type-month" placeholder="Add a month">
+						</div>
+						<div>
+							<label for="type-week">Week (week)</label>
+							<input type="week" name="type-week" id="type-week" placeholder="Add a week">
+						</div>
+						<div>
+							<label for="type-time">Time (time)</label>
+							<input type="time" name="type-time" id="type-time" placeholder="Add a time">
+						</div>
+						<div>
+							<label for="type-datetime-local">Local Date and Time (datetime-local)</label>
+							<input type="datetime-local" name="type-datetime-local" id="type-datetime-local" placeholder="Add a local date/time">
+						</div>
+						<div>
+							<label for="type-number">Number (number)</label>
+							<input type="number" name="type-number" id="type-number" min="0" max="20" placeholder="Add a number"> 
+						</div>
+						<div>
+							<label for="type-range">Range (range)</label>
+							<input type="range" name="type-range" id="type-range" min="0" max="100" placeholder="Add a range">
+						</div>
+						<div class="unit float last ten">
+							<label for="type-color">Colour (color)</label>
+							<input type="color" name="type-color" id="type-color" placeholder="Add a colour">
+						</div>
+						<div class="unit float last ten">
+							<label for="textarea_sample">Textarea field</label>
+						   	<textarea name="textarea_sample" id="textarea_sample" rows="8" cols="40"></textarea>
+						</div>
+	                    <div class="unit float last ten">
+							<label for="radiogroup_sample-male">Male</label>
+						   	<input type="radio" name="radiogroup_sample" id="radiogroup_sample-male" value="male" />
+							<label for="radiogroup_sample-female">Female</label>
+							<input type="radio" name="radiogroup_sample" id="radiogroup_sample-female" value="female" />
+						</div>
+	                    <div class="unit float last ten">
+							<label for="checkgroup_sample-male">Male</label>
+						   	<input type="checkbox" name="checkgroup_sample" id="checkgroup_sample-male" value="male" />
+							<label for="checkgroup_sample-female">Female</label>
+							<input type="checkbox" name="checkgroup_sample" id="checkgroup_sample-female" value="female" />
+						</div>
+					</fieldset>
+					<button type="submit">Submit</button>
+				</form>
+			</article>		
+			<article id="sec-tables">
+				<h1>Tables</h1>
+				<table border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<th>Column 1</th>
+							<th>Column 2</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td>Footer col 1</td> 
+							<td>Footer col 2</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>A longer bit of content to test line&ndash;height in this cell</td> 
+							<td>Column 1</td>
+						</tr>
+					</tbody>			
+				</table>
+			</article>
+			<footer role="footer" id="page-footer">
+				<small>Made at the Tangent Snowball HQ by the FED team</small>
+			</footer>		 
+		</section>   
+	</body>	
+</html>
