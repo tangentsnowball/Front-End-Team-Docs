@@ -1,0 +1,116 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+/*================
+=======
+                                /*================
+>>>>>>> gh-pages
+=======
+                                /*================
+>>>>>>> gh-pages
+Print styles
+Version 1.0
+Author: Tangent Snowball FED team
+Created: 12.19.2011
+Last revised: --
+--
+Contents:
+--
+==================*/  
+
+/*========
+[=1: html5doctor.com reset]
+v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
+(Lines not applicable to print have been removed)
+========*/
+	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;}
+	article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{ display:block;}
+	blockquote,q{quotes:none;}
+	blockquote:before,blockquote:after,
+	q:before,q:after{content:'';content:none;}
+	a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+	del{text-decoration:line-through;}
+	abbr[title],dfn[title]{border-bottom:0.5pt dotted;cursor:help;}
+	table{border-collapse:collapse;border-spacing:0;}
+	input,select{vertical-align:middle;}
+	ins{text-decoration:none;}
+	hr{display:block;height:0.5pt;border:0;padding:0;}
+
+/*========
+[=2:Base globally-available styles]
+======== */
+	/*--[=2a:Elements to hide]--*/
+		nav,form{display:none;}
+	/*--[=2b:Typography]--*/
+		/*-Set webfont stacks for all applicable elements-*/
+			blockquote p,var{font-family:Georgia,serif;}
+		/*-Set base rules for all typographic elements*/
+			/*Set base font-family/line-height and declare the px size of an em unit*/
+				body{font:10pt/12pt arial,helvetica,sans-serif;}
+			/*Block elements*/   
+				p{margin:0 0 10pt 0;}
+				h1,h2,h3,h4,h5,h6{font-weight:normal;margin:20pt 0 10pt 0;}
+					h1{font-size:24pt;line-height:27pt;}
+					h2{font-size:18pt;line-height:20.5pt;}
+					h3{font-size:16pt;line-height:19pt;}
+					h4,h5,h6{font-size:10.5pt;}
+				ul,ol{margin:0 0 10pt 24pt;}	
+						ul li,ol li{margin:0;}
+					ul{list-style:disc outside;}
+						ul ul{margin:3pt 0 5pt 10pt;}
+					ol{list-style:decimal outside;}
+						ol ol{margin:3pt 0 5pt 14pt;list-style-type:lower-roman;}
+				dl{margin:0 0 10pt 0;}
+					dt{font-weight:bold;margin:5pt 0 5pt 0;}
+					dd{margin:0;}
+				blockquote{margin:0 0 10pt 24pt;}
+					blockquote p{font-size:10.5pt;line-height:14pt;}
+					blockquote cite{display:block;margin:-5pt 0 10pt 0;}
+				hr{border-top:0.5pt solid #ccc;margin:10pt 0;}	
+				pre{white-space:pre;width:100%;overflow:auto;margin:0 0 0.5pt 0;}
+			/*Inline elements*/
+				/*Superscript/subscript*/
+					sup,sub{position:relative;height:0;line-height:0.5pt;}
+						sup{bottom:1ex;}
+						sub{top:.5ex;}
+				/*For marking up content relevency/edits and highlighting content*/		  
+					ins{background-color:#ff9;}
+					del{text-decoration:line-through;}
+					s{color:#666;text-decoration:line-through}
+					mark{background-color:#ff9;font-weight:bold;}
+				/*Inline quotes / small print*/	
+					q{font-style:italic;}
+					cite{font-style:italic;}
+					small{font-weight:normal;font-style:normal;}
+				/*phrase tags*/
+					strong{font-weight:bold;}
+					em{font-style:italic;}
+					dfn{font-style:italic;}
+					code,samp,kbd{font-family:courier,monospace;}
+					var{font-style:italic;font-weight:bold;}
+	/*--[=2c:Links]--*/
+		/*-Inline links-*/
+			a{color:#666;text-decoration:underline;}
+		/*-Linked images-*/
+			a img{border:none;}
+	/*--[=2d:Images]--*/
+		/*Standalone*/
+			img{margin:0 0 10pt 0;padding:2pt 0 0 0;}
+		/*Within a figure tag*/
+			figure{margin:0 0 10pt 0;}
+				figure img{margin:0 0 3pt 0;}
+				figure figcaption{font-size:8pt;margin:0;}
+	/*--[=2e:Tables]--*/
+		table{margin:0 0 10pt 0;width:100%;border:0.5pt solid #000;}
+			caption{text-align:left;padding:0 0 5pt 0;}
+			td,th{padding:3pt 10pt;text-align:left;border:0.25pt dotted #000;}
+			thead{border-bottom:1pt solid #000;font-weight:bold;}
+				thead th{border-style:solid;}
+			tfoot{font-style:italic;}
+		
+/*========
+[=3:Modular components]
+======== */
+
+/*========
+[=4:Global layout styles]
+======== */

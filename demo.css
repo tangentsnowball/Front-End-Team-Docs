@@ -1,0 +1,52 @@
+/*================
+Screen styles specifically for demo page
+Version 1.0
+Author: Tangent Snowball FED team
+Created: 12.19.2011
+Last revised: --
+--
+Contents:
+--
+==================*/   
+
+/*========
+[=0: Set font-face rules]
+========*/
+	h1,header[role="banner"] h2{font-family: 'Lobster', cursive;}
+/*========
+[=1:Global layout styles]
+======== */                                                  
+	html{background:#eee;}
+	body{width:960px;margin:0 auto;} 
+	
+	nav[role="navigation"]{position:relative;}		
+		nav[role="navigation"] ol{list-style:none;margin:1em 0 0 0;padding:0;width:300px;float:left;background:#fff;border-radius:1em;position:fixed;box-shadow:0 0 1px #ccc;}
+		nav[role="navigation"] li{display:inline;margin:0;}
+		nav[role="navigation"] a{display:block;border-bottom:1px solid #eee;border-top:1px solid #fff;padding:0.75em 10px;color:#333;font-weight:bold;box-shadow:inset 0 0 2px #eee;text-shadow:0 1px 0 #fff;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			-ms-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;}
+			nav[role="navigation"] li:nth-child(even) a{background:#FBFBFB;}
+			nav[role="navigation"] li:first-child a{border-top:none;}  
+			nav[role="navigation"] li:last-child a{border-bottom:none;border-radius:0 0 1em 1em;}      
+			nav[role="navigation"] a:hover,nav[role="navigation"] li:nth-child(even) a:hover{color:#000;background:#ccc;cursor:pointer;box-shadow:inset 0 0 3px #333;}
+			.cpt-top_link{position:fixed;bottom:-2px;background:#ccc;border-radius:1em 1em 0 0;box-shadow:0 0 3px #ccc;border:1px solid #eee;text-shadow:0 1px 0 #fff;width:100px;line-height:1.5em;text-align:center;}
+				.cpt-top_link:hover{line-height:3em;}
+	
+	header[role="banner"]{text-align:center;margin:0 0 3em 0;} 
+		header hgroup{margin:0 0 2em 0;}
+		header[role="banner"] h1,
+		header[role="banner"] h2
+		{margin:0;font-size:4em;color:#333;text-shadow:1px 1px 0 #fff;}
+		#intro{-webkit-column-count:2;-webkit-column-gap:30px;-moz-column-count:2;-moz-column-gap:30px;column-count:2;column-gap:30px;text-align:left;} 
+			header[role="banner"] p{color:#000;font-size:1.2em;margin:0 0 0.5em 0;text-shadow:1px 1px 0 #fff;} 
+		
+	section[role="main"]{width:600px;float:right;}	
+		article{background:#fff;padding:1em 15px;margin:0 0 2em 0;border-radius:1em;box-shadow:0 0 2px #ccc;}	
+			article h1:nth-of-type(1){margin-top:0;text-align:center;border-bottom:2px solid #eee;padding:0 0 0.5em 0;}	
+			article h1:nth-of-type(1):before,
+			article h1:nth-of-type(1):after
+			{content:"-";}	    
+		#page-footer{padding:1em 0 2em 0;text-shadow:0 1px 0 #fff;}       
