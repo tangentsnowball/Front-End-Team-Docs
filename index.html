@@ -8,17 +8,17 @@
 		
 		<!--Demo-specific calls-->
 		<link rel="stylesheet" href="demo.css" media="screen" />
-		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<script src="scripts.js"></script>
 	</head>
-	<body id="p-demo">
+	<body id="p-demo" onload="prettyPrint()">
 		<nav role="navigation"> 
-			<ol>
+			<ol class="clearfix">
 				<li><a href="#sec-general" title="Skip to">General</a></li>
 				<li><a href="#sec-html" title="Skip to">HTML</a></li>
 				<li><a href="#sec-css" title="Skip to">CSS</a></li>
 				<li><a href="#sec-javascript" title="Skip to">Javascript</a></li>
 			</ol>
-			<a href="#p-demo" title="Skip to" class="cpt-top_link">&uarr; Back to top</a>
 		</nav>	
 	   	<section role="main"> 
 			<header role="banner">
@@ -28,7 +28,7 @@
 				</hgroup>
 				<div id="intro">
 					<p>The following is a series of guidelines for writing front end code, based on our own knowledge and preferences as well as elements from other guideline documents that we found useful.</p>
-					<p>It does not cover things we consider obvious, such as using divs for layout and tables for tabular data.</p>
+					<p>Things like only using tables for tabular data haven't been covered, as we'd consider these things obvious. Right?</p>
 					<p>This document does not address browser support directly as this is covered in other materials.</p>
 				</div>
 			</header>
@@ -54,9 +54,7 @@
 				
 				<h2>Minimise markup and classes</h2>
 				<h3>What?</h3>
-
-				<pre>
-&lt;div class="pageblock"&gt;
+<pre class="prettyprint">&lt;div class="pageblock"&gt;
   &lt;div class="page-header clearfix"&gt;
     &lt;h1 class="pageheader-heading"&gt;Contact us&lt;/h1&gt;
   &lt;/div&gt;
@@ -65,19 +63,16 @@
     &lt;li class="pagelist-li"&gt;&lt;span class="bold"&gt;By email&lt;/span&gt; email@us.com&lt;/li&gt;
     &lt;li class="pagelist-li"&gt;&lt;span class="bold"&gt;By post&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
-&lt;/div&gt;
-                </pre>
+&lt;/div&gt;</pre>
                 <p>Believe it or not, the above happens. A cleaner version, where exactly the same effects could be achieved, would be:</p>
-				<pre>
-&lt;div class="pageblock"&gt;
+<pre class="prettyprint">&lt;div class="pageblock"&gt;
   &lt;h1&gt;Contact us&lt;/h1&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;span&gt;By phone&lt;/span&gt; 012345678&lt;/li&gt;
     &lt;li&gt;&lt;span&gt;By email&lt;/span&gt; email@us.com&lt;/li&gt;
     &lt;li&gt;&lt;span&gt;By post&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
-&lt;/div&gt;
-                </pre>
+&lt;/div&gt;</pre>
                 <h3>Why?</h3>
                 <p>Excesses like the above add to the page and CSS size and reduces the readability of your code.</p>
 			</article>
@@ -99,13 +94,9 @@
                 <h2>No CSS hacks and minimise browser specific styles</h2>
                 <h3>What?</h3>
                 <p>There are lots of these, mostly to help get around inconsistencies in the way earlier versions of Internet Explorer render pages. Common ones such as the star html hack have been around for ever...</p>
-				<pre>
-    * html #header {margin:0px 0px 10px 0px;}
-				</pre>
+				<pre class="prettyprint lang-css">* html #header {margin:0px 0px 10px 0px;}</pre>
 				<p>These days there are more sophisticated ways of using Javascript to detect the browser and give the body a particular class to inherit from.</p>
-				<pre>
-    .ie6 .redbox {margin:0px;padding:1px;}
-				</pre>
+				<pre class="prettyprint lang-css">.ie6 .redbox {margin:0px;padding:1px;}</pre>
 				<h3>Why not?</h3>
 				<p>We should be writing sites that use modern CSS techniques to deliver a quality visual experience, while letting our sites degrade gracefully in older browsers. True, the occasional browser specific rule is sometimes necessary but we shouldn't be maintaining any more than that.</p>
                 <p>If you need to write a browser specific rule, use the second technique above. It's much safer - how can you be sure another developer won't spot your hack, assume it's a typo and correct it without checking?</p>
@@ -131,9 +122,7 @@
                 <h2>Use meaningful class names</h2>
                 <h3>What?</h3>
                 <p>An example of how not to do it...</p>
-				<pre>
-    &lt;p class="style_16 word"&gt;content&lt;/p&gt;
-				</pre>
+				<pre class="prettyprint">&lt;p class="style_16 word"&gt;content&lt;/p&gt;</pre>
 				<h3>Why?</h3>
 				<p>It's not always easy to come up with a class name that has some kind of meaning. But the example above, when combined with an disorganised, uncommented stylesheet, begs the immediate question - is this style used elsewhere? Can it be safely changed without breaking something else?</p>
                 <p>Classes should have names that reflect their function rather than their appearance, e.g. actionbutton and cancelbutton instead of greenbutton and redbutton.</p>
@@ -141,9 +130,9 @@
                 <h2>Don't try to write classes that can be reused everywhere</h2>
                 <h3>What?</h3>
                 <p>Ever seen anything like this?</p>
-				<pre>
-    &lt;div class="floatleft centered bold italic bluebg roundedcorners tahomafont size14"&gt;
-				</pre>
+<pre class="prettyprint lang-css">
+&lt;div class="floatleft centered bold italic bluebg roundedcorners tahomafont size14"&gt;
+</pre>
 				<h3>Why not?</h3>
 				<p>Because to take the floating off this div you have to edit the markup, not the stylesheet - or risk defloating half the site. Class reuse is good, but this is taking it to an unnecessary extreme. Also, what advantage does this level of reuse give? The stylesheet is loaded and cached on the first page visit - after that all you're doing is adding to the size of the markup.</p>
 				
@@ -180,17 +169,17 @@
                 <h2>Use a single top level object to namespace your code</h2>
                 <h3>What?</h3>
                 <p>Bad:</p>
-				<pre>
+<pre class="prettyprint">
     function geticons() { ... }
     geticons();
-				</pre>
+</pre>
 				<p>Good:</p>
-				<pre>
+<pre class="prettyprint">
     var snowcone = {
         geticons: function() { ... }
     }
     snowcone.geticons();
-				</pre>
+</pre>
 				<h3>Why?</h3>
 				<p>Javascript has a global scope problem which is best worked around by using this approach. It also helps to enforce a much cleaner way of organising the code.</p>
 
@@ -200,20 +189,21 @@
 				<h3>Why?</h3>
 				<p>Some browsers (IE7) will not run code at all even though other browsers are quite happy to - just because a stray comma may be lying around somewhere.</p>
 
-				<h2>Don't use Javascript to alter layout on page load</h2>
+				<h2>Where possible*, avoid using Javascript to alter layout on page load</h2>
 				<h3>What?</h3>
-				<p>Let's be clear - Javascript can and should be used for all sorts of things including altering the layout of a page. But this should only happen when the user interacts with it - Javascript shouldn't be used as a shortcut for fixing browser compatibility bugs on page load, e.g.</p>
-				<pre>
+				<p>Let's be clear - Javascript can and should be used for all sorts of things including altering the layout of a page. But where possible, this should only happen when the user interacts with it - Javascript shouldn't be used as a shortcut for fixing browser compatibility bugs on page load, e.g.</p>
+<pre class="prettyprint">
     $(document).ready(function(){
         $('.ie6 ul').css('margin', '5px 5px 5px 20px');
     });
-				</pre>
+</pre>
 				<h3>Why not?</h3>
 				<p>It's the wrong tool for the job. If the markup and CSS doesn't work in all the browsers required, then it needs rewriting. Styles should go in the stylesheet - developers shouldn't have to hunt through lines of Javascript to figure out why the page isn't rendering as they expect.</p>
+				<p>* Of course, in some cases Javascript may have to be used  to set the height or width of something, but stuff like this should be employed in a pragmatic way.</p>
 			</article>
 
 			<footer id="page-footer">
-				<small>Made at the Tangent Snowball HQ by the FED team</small>
+				<small>Made at Tangent Snowball HQ by the <abbr title="Front End Design">FED</abbr> team</small>
 			</footer>		 
 		</section>   
 	</body>	

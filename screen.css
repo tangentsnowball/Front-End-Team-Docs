@@ -3,8 +3,7 @@ Screen styles
 Version 1.0
 Author: Tangent Snowball FED team
 Created: 12.19.2011
-Last revised: --
---
+Last revised: 03.16.2012
 Contents:
 --
 ==================*/ 
@@ -40,27 +39,43 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		
 		/*-Set base rules for all typographic elements*/
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
-				body{font:12px/1.45em Arial,helvetica,sans-serif;color:#666;}
+				body{font:16px/1.5em Arial,helvetica,sans-serif;color:#111;}
 			/*Block elements*/   
-				p{margin:0 0 0.82em 0;line-height:1.45em;}
+				p{margin:0 0 1em 0;line-height:1.5em;}
 				hgroup{position:relative;}
-				h1,h2,h3,h4,h5,h6{line-height:1.3em;font-weight:normal;margin:2.08em 0 0.41em 0;color:#111;}
-					h1{font-size:3em;margin:1.1em 0 0.83em 0;} 
-					h2,h3,h4,h5,h6{font-size:1em;}
-				ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
-						ul li,ol li{margin:0 0 0.41em 0;}
+				h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2em 0 0.5em 0;color:#111;}
+					h1{font-size:3em;margin:1em 0 0.75em 0;} 
+					h2{font-size:1.5em;font-weight:bold;}
+					h3{font-size:1.2em;font-weight:bold;}
+				ul,ol,dl{margin:0 0 1em 2.5em;padding:1em 0 0 0;}	
+						ul li,ol li{margin:0 0 0.5em 0;}
 					ul{list-style:disc outside;}
 						ul ul{margin:0.25em 0 0.5em 1em;}
 					ol{list-style:decimal outside;}
 						ol ol{margin:0.25em 0 0.5em 1.4em;list-style-type:lower-roman;}
 					dl{padding:0;}
-						dt{font-weight:bold;margin:0 0 0.41em 0;padding:1.1em 0 0 0;}
-						dd{margin:0 0 0.41em 0;}
-				blockquote{margin:0 0 2.5em 0;padding:1.1em 0 0 0;font-style:italic;}
+						dt{font-weight:bold;margin:0 0 0.5em 0;padding:1em 0 0 0;}
+						dd{margin:0 0 0.5em 0;}
+				blockquote{margin:0 0 2.5em 0;padding:1em 0 0 0;font-style:italic;}
 					blockquote p{color:#1AAB8A;margin-left:2.5em;}
-					blockquote footer{display:block;margin:-0.41em 0 0 2.5em;}
+					blockquote footer{display:block;margin:-0.5em 0 0 2.5em;}
 				hr{border-top:1px dotted #ccc;padding:1.1em 0;margin:2.1em 0 0 0;}	
-				pre{white-space:pre;width:100%;overflow:auto;margin:1.1em 0;padding:0.82em 0;border:1px dotted #ccc;border-left:none;border-right:none;}
+				pre{
+					white-space:pre;
+					width:100%;
+					overflow:auto;
+					margin:1.1em 0;
+					padding:1em;
+					border-left:none;
+					border-right:none;
+					background:#eee;
+					text-shadow:0 1px 0 #fff;
+					box-shadow:inset 0 0 3px #ccc;
+					box-sizing:border-box;
+					-moz-box-sizing:border-box;
+					-webkit-box-sizing:border-box;
+					border-radius:0.25em;
+				}
 					p pre{margin:0;padding:0;border:none;}
 			/*Inline elements*/
 				/*Superscript/subscript*/
@@ -85,11 +100,11 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	/*--[=2b:Links]--*/
 		:focus{outline:none;}
 		/*-Inline links-*/
-			a{color:#5038AA;text-decoration:none;}
-				a:link{color:#5038AA;text-decoration:none;}
-				a:visited{color:#5038AA;text-decoration:none;}
-				a:hover{color:#8CAC1B;text-decoration:none;}
-				a:active{color:#5038AA;text-decoration:none;}		
+			a{color:#666;text-decoration:none;}
+				a:link{color:#666;text-decoration:none;}
+				a:visited{color:#666;text-decoration:underline;}
+				a:hover{color:#111;text-decoration:none;}
+				a:active{color:#666;text-decoration:none;}		
 		/*-Linked images-*/
 			a img{border:none;}
 	/*--[=2c:Images]--*/
@@ -146,7 +161,56 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	
 /*========
 [=7:Third-party styles]
-======== */		 
+======== */	
+	/*--[=7a: Prettify JS]--*/
+	.pln{color:#000}
+	@media screen{
+		.str{color:#080}
+		.kwd{color:#008}
+		.com{color:#800}
+		.typ{color:#606}
+		.lit{color:#066}
+		.pun,.opn,.clo{color:#660}
+		.tag{color:#008}
+		.atn{color:#606}
+		.atv{color:#080}
+		.dec,.var{color:#606}
+		.fun{color:red}
+	}
+	@media print,projection{
+		.str{color:#060}
+		.kwd{
+			color:#006;
+			font-weight:bold;
+		}
+		.com{
+			color:#600;
+			font-style:italic;
+		}
+		.typ{
+			color:#404;
+			font-weight:bold;
+		}
+		.lit{color:#044}
+		.pun,.opn,.clo{color:#440}
+		.tag{
+			color:#006;
+			font-weight:bold;
+		}
+		.atn{color:#404}
+		.atv{color:#060}
+
+	}
+	ol.linenums{
+		margin-top:0;
+		margin-bottom:0;
+	}
+	li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{
+		list-style-type:none;
+	}
+	li.L1,li.L3,li.L5,li.L7,li.L9{
+		background:#eee;
+	}	 	 
 
 /*========
 [=8:Vendor-specific styles]
