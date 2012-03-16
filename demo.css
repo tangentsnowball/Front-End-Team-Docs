@@ -3,8 +3,7 @@ Screen styles specifically for demo page
 Version 1.0
 Author: Tangent Snowball FED team
 Created: 12.19.2011
-Last revised: --
---
+Last revised: 03.16.2012
 Contents:
 --
 ==================*/   
@@ -12,41 +11,139 @@ Contents:
 /*========
 [=0: Set font-face rules]
 ========*/
-	h1,header[role="banner"] h2{font-family: 'Lobster', cursive;}
+	h1,
+	header[role="banner"] h2{
+		font-family: 'Bree Serif', cursive;
+	}
 /*========
 [=1:Global layout styles]
 ======== */                                                  
-	html{background:#eee;}
-	body{width:960px;margin:0 auto;} 
-	
-	nav[role="navigation"]{position:relative;}		
-		nav[role="navigation"] ol{list-style:none;margin:1em 0 0 0;padding:0;width:300px;float:left;background:#fff;border-radius:1em;position:fixed;box-shadow:0 0 1px #ccc;}
-		nav[role="navigation"] li{display:inline;margin:0;}
-		nav[role="navigation"] a{display:block;border-bottom:1px solid #eee;border-top:1px solid #fff;padding:0.75em 10px;color:#333;font-weight:bold;box-shadow:inset 0 0 2px #eee;text-shadow:0 1px 0 #fff;
+	html{
+		background:#eee;
+	}
+	body{
+		width:80%;
+		max-width:800px;
+		margin:0 auto;
+		padding:5em 0;
+	} 
+	nav[role="navigation"]{
+		position:fixed;
+		z-index:1;
+		width:100%;
+		top:0;
+		left:0;
+		height:100px;
+		background: -moz-linear-gradient(top, rgba(255,255,255,1) 56%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(56%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 56%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(255,255,255,1) 56%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(255,255,255,1) 56%,rgba(255,255,255,0) 100%); /* IE10+ */
+		background: linear-gradient(top, rgba(255,255,255,1) 56%,rgba(255,255,255,0) 100%); /* W3C */
+	}		
+		nav[role="navigation"] ol{
+			list-style:none;
+			margin:0 auto;
+			padding:0;
+			width:80%;
+			max-width:800px;
+			background:#111;
+			border-radius:0 0 0.25em 0.25em;
+		}
+		nav[role="navigation"] li{
+			display:inline;
+			margin:0;
+		}
+		nav[role="navigation"] a{
+			display:block;
+			width:25%;
+			line-height:3em;
+			float:left;
+			text-align:center;
+			color:#fff;
 			-webkit-transition: all .2s ease-in-out;
 			-moz-transition: all .2s ease-in-out;
 			-o-transition: all .2s ease-in-out;
 			-ms-transition: all .2s ease-in-out;
-			transition: all .2s ease-in-out;}
-			nav[role="navigation"] li:nth-child(even) a{background:#FBFBFB;}
-			nav[role="navigation"] li:first-child a{border-top:none;}  
-			nav[role="navigation"] li:last-child a{border-bottom:none;border-radius:0 0 1em 1em;}      
-			nav[role="navigation"] a:hover,nav[role="navigation"] li:nth-child(even) a:hover{color:#000;background:#ccc;cursor:pointer;box-shadow:inset 0 0 3px #333;}
-			.cpt-top_link{position:fixed;bottom:-2px;background:#ccc;border-radius:1em 1em 0 0;box-shadow:0 0 3px #ccc;border:1px solid #eee;text-shadow:0 1px 0 #fff;width:100px;line-height:1.5em;text-align:center;}
-				.cpt-top_link:hover{line-height:3em;}
+			transition: all .2s ease-in-out;
+		}
 	
-	header[role="banner"]{text-align:center;margin:0 0 3em 0;} 
-		header hgroup{margin:0 0 2em 0;}
+	header[role="banner"]{
+		text-align:center;
+		margin:0 0 3em 0;
+	} 
+		header hgroup{
+			margin:0 0 2em 0;
+		}
 		header[role="banner"] h1,
-		header[role="banner"] h2
-		{margin:0;font-size:4em;color:#333;text-shadow:1px 1px 0 #fff;}
-		#intro{-webkit-column-count:2;-webkit-column-gap:30px;-moz-column-count:2;-moz-column-gap:30px;column-count:2;column-gap:30px;text-align:left;} 
-			header[role="banner"] p{color:#000;font-size:1.2em;margin:0 0 0.5em 0;text-shadow:1px 1px 0 #fff;} 
-		
-	section[role="main"]{width:600px;float:right;}	
-		article{background:#fff;padding:1em 15px;margin:0 0 2em 0;border-radius:1em;box-shadow:0 0 2px #ccc;}	
-			article h1:nth-of-type(1){margin-top:0;text-align:center;border-bottom:2px solid #eee;padding:0 0 0.5em 0;}	
-			article h1:nth-of-type(1):before,
-			article h1:nth-of-type(1):after
-			{content:"-";}	    
-		#page-footer{padding:1em 0 2em 0;text-shadow:0 1px 0 #fff;}       
+		header[role="banner"] h2{
+			margin:0;
+			font-size:3em;
+			color:#333;
+			text-shadow:1px 1px 0 #fff;
+		}
+		header[role="banner"] p{
+			color:#000;
+			font-size:1.2em;
+			margin:0 0 0.5em 0;
+			text-shadow:1px 1px 0 #fff;
+			text-align:left;
+		} 
+	
+	article{
+		background:#fff;
+		padding:1em 2em;
+		margin:0 0 2em 0;
+		border-radius:0.25em;
+		box-shadow:0 0 2px #ccc;
+	}	
+		article h1:nth-of-type(1){
+			margin-top:0;
+			text-align:center;
+			border-bottom:1px solid #ccc;
+			padding:0 0 0.5em 0;
+		}	
+		article h1:nth-of-type(1):before,
+		article h1:nth-of-type(1):after
+		{content:"-";}	    
+	#page-footer{
+		color:#666;
+		padding:1em 0 2em 0;
+		text-shadow:0 1px 0 #fff;
+		text-align:center;
+	} 
+	
+@media only screen and (min-width:200px) and (max-width:600px){
+	
+	h1{font-size:2em;}
+	h2{font-size:1.2em;}
+	h3{font-size:1em;}
+	
+	body{width:100%;}
+
+	nav[role="navigation"] ol{
+		width:100%;
+		border-radius:0;
+	}
+	
+	header[role="banner"]{
+		padding:0 5%;
+	}
+	
+	header[role="banner"] h1,
+	header[role="banner"] h2{
+		font-size:2em;
+	}
+	header[role="banner"] p{
+		font-size:1em;
+		font-weight:bold;
+	}
+	
+	article{
+		padding-left:5%;
+		padding-right:5%;
+		border-radius:0;
+		border-top:3px solid #999;
+		border-bottom:1px solid #ccc;
+	}
+}	      
