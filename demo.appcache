@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# 2012-01-29
+
+# Explicitly cached 'master entries'
+CACHE:
+index.html
+screen.css
+demo.css
+scripts.js
