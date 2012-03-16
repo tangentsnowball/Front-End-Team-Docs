@@ -13,7 +13,7 @@ Contents:
 ========*/
 	h1,
 	header[role="banner"] h2{
-		font-family: 'Bree Serif', cursive;
+		font-family: 'Bree Serif', arial, sans-serif;
 	}
 /*========
 [=1:Global layout styles]
